@@ -1,0 +1,158 @@
+<!DOCTYPE html> <!-- Mendefinisikan tipe dokumen HTML5 -->
+<html lang="id"> <!-- Elemen utama halaman, dengan bahasa Indonesia -->
+ 
+<head>
+  <meta charset="UTF-8"> <!-- Set karakter encoding ke UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsif untuk perangkat mobile -->
+  <title>Rumah Sakit</title> <!-- Judul tab browser -->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Import font Poppins -->
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script> <!-- Library ikon Feather -->
+
+  <link rel="stylesheet" href="dia 1.css"> <!--Link ke file CSS eksternal-->
+  <style>
+  #gatau {
+  max-width: 600px;                 /* Lebar maksimum hasil */
+  margin: 30px auto;                /* Tengah dan jarak dari atas */
+  background-color: #ffffff;        /* Latar putih */
+  border-left: 6px solid #6c63ff;   /* Garis warna di kiri */
+  padding: 20px 30px;               /* Padding dalam */
+  border-radius: 8px;               /* Sudut membulat */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Bayangan halus */
+  color: #333;                      /* Warna teks */
+}
+
+  #gatau h2 {
+  margin-top: 0;                    /* Hilangkan margin atas */
+  color: #6c63ff;                   /* Warna judul biru */
+  font-size: 20px;                  /* Ukuran judul */
+  border-bottom: 1px solid #eee;    /* Garis bawah abu muda */
+  padding-bottom: 10px;             /* Jarak ke bawah */
+}
+
+  #gatau p {
+  margin: 8px 0;                    /* Jarak atas dan bawah */
+  line-height: 1.5;                 /* Jarak antar baris */
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================== Navbar ==================== -->
+  <nav class="navbar"> <!-- Navbar utama -->
+    <a href="#" class="navbar-logo">Rumah Sakit</a> <!-- Logo atau nama merek -->
+
+    <div class="navbar-nav"> <!-- Navigasi halaman -->
+      <a href="Home.html">Home</a> <!-- Link ke halaman Home -->
+      <a href="Tentang Kami.html">Tentang Kami</a> <!-- Link ke halaman Tentang Kami -->
+      <a class="tombol" href="Layanan.html">Layanan</a> <!-- Link ke halaman Layanan -->
+      <a href="Kontak.html">Kontak</a> <!-- Link ke halaman Kontak -->
+      <a href="Raisya.html">Biodata</a> <!-- Link ke halaman Biodata -->
+    </div>
+  </nav>
+
+  <!-- ==================== Formulir ==================== -->
+    <div class="Formulir"> <!-- Container formulir -->
+    <h1 style="text-transform: uppercase; text-align:center;">
+      Formulir Pendaftaran Pasien <!-- Judul utama formulir -->
+    </h1>
+
+    <script>
+      var yakin = confirm("Apakah Kamu Yakin Ingin Membuka Form di page ini ?");
+
+      if (yakin) {
+          alert('Selamat Membuat Form Sendiri');
+      } else {
+           window.location = "https://www.detik.com";
+      }
+    </script>
+    <!-- Form input -->
+     <form id="FormSaya">
+      <!-- <label>Nama Kamu:</label> -->
+      <script>
+        var NamaLengkap = prompt("Apa yang Mau Kamu Minta ?", "NamaLengkap :");
+        document.write("<p><b>"+ NamaLengkap +"</b></p>");
+    </script>
+      <input type="text" id="NamaLengkap" required>
+     <script>
+        var Tanggal_Lahir = prompt("Apa yang Mau Kamu Minta ?", "Tanggal_Lahir :");
+        document.write("<p><b>"+ Tanggal_Lahir +"</b></p>");
+    </script>
+      <input type="text" id="Tanggal_Lahir" required>
+    <script>
+        var Alamat = prompt("Apa yang Mau Kamu Minta ?", "Alamat :");
+        document.write("<p><b>"+ Alamat +"</b></p>");
+    </script>
+      <input type="text" id="Alamat" required>
+     <script>
+        var Umur = prompt("Apa yang Mau Kamu Minta ?", "Umur :");
+        document.write("<p><b>"+ Umur +"</b></p>");
+    </script>
+      <input type="text" id="Umur" required>
+     <script>
+        var Hobi = prompt("Apa yang Mau Kamu Minta ?", "Hobi :");
+        document.write("<p><b>"+ Hobi +"</b></p>");
+    </script>
+      <input type="text" id="Hobi" required>
+     <script>
+        var Nik = prompt("Apa yang Mau Kamu Minta ?", "Nik :");
+        document.write("<p><b>"+ Nik +"</b></p>");
+    </script>
+      <input type="text" id="Nik" required>
+     <script>
+        var Email = prompt("Apa yang Mau Kamu Minta ?", "Email :");
+        document.write("<p><b>"+ Email +"</b></p>");
+    </script>
+      <input type="text" id="Email" required>
+     <script>
+        var no_hp = prompt("Apa yang Mau Kamu Minta ?", "no_hp :");
+        document.write("<p><b>"+ no_hp +"</b></p>");
+    </script>
+      <input type="text" id="no_hp" required>
+      <button type="submit">Kirim</button>
+     </form>
+     <!-- Form dengan ID 'formPasien' -->
+
+  </div>
+  <!-- ==================== Hasil Output ==================== -->
+  <div id="gatau" style="display:none;"></div> <!-- Container untuk menampilkan hasil input -->
+
+  <!-- ==================== Script JavaScript ==================== -->
+  <script>
+    const form = document.getElementById("FormSaya"); 
+const hasil = document.getElementById("gatau"); 
+
+form.addEventListener("submit", function(dahtau) {
+    dahtau.preventDefault(); 
+
+    const NamaLengkap = document.getElementById("NamaLengkap").value; 
+    const Tanggal_Lahir = document.getElementById("Tanggal_Lahir").value; 
+    const Alamat = document.getElementById("Alamat").value; 
+    const Umur = document.getElementById("Umur").value; 
+    const Hobi = document.getElementById("Hobi").value; 
+    const Nik = document.getElementById("Nik").value; 
+    const Email = document.getElementById("Email").value; 
+    const no_hp = document.getElementById("no_hp").value; 
+
+    hasil.style.display = "block"; 
+    hasil.innerHTML = ` 
+        <h2>DATA PRIBADI</h2>
+        <p><b>Nama Lengkap: </b> ${NamaLengkap}</p>
+        <p><b>Tanggal Lahir: </b> ${Tanggal_Lahir}</p>
+        <p><b>Alamat: </b> ${Alamat}</p>
+        <p><b>Umur: </b> ${Umur}</p>
+        <p><b>Hobi: </b> ${Hobi}</p>
+        <p><b>NIK: </b> ${Nik}</p>
+        <p><b>Email: </b> ${Email}</p>
+        <p><b>No. HP: </b> ${no_hp}</p>
+    `;
+});
+  </script>
+
+</body>
+</html>
